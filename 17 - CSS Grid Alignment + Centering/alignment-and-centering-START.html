@@ -57,11 +57,17 @@
       justify-items:
       align-items:
 
+      ****inside the rows
+
       justify-content:
       align-content:
 
+      ****inside the parent container/div
+
       align-self:
       justify-self:
+
+      ** override single ones
 
       justify-* is row axis
       align-* is column axis
@@ -71,6 +77,11 @@
       display: grid;
       grid-gap: 20px;
       grid-template-columns: repeat(10, 1fr);
+      justify-items: stretch;
+    }
+
+    .itm {
+      background-color: mistyrose;
     }
   </style>
 </body>

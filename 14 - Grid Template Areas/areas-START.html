@@ -29,6 +29,37 @@
     .container {
       display: grid;
       grid-gap: 20px;
+      grid-template-columns: 1fr 500px 1fr;
+      grid-template-rows: 150px 150px 100px;
+      grid-template-areas:
+        "sb1 content sb2"
+        "sb1 content sb2"
+        "footer footer footer";
+    }
+
+    .footer {
+      grid-area: footer;
+    }
+
+    .item1 {
+      grid-area: sb1;
+    }
+
+    .item3 {
+      grid-area: sb2;
+    }
+
+    .item2 {
+      grid-area: content;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        grid-template-areas:
+          "content content content"
+          "sb1 sb1 sb2"
+          "footer footer footer";
+      }
     }
   </style>
 </body>
